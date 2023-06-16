@@ -56,6 +56,11 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "capistrano", "~> 3.17"
+  gem "capistrano-rails", "~> 1.6"
+  gem 'capistrano-rbenv', '~> 2.2'
+  gem 'capistrano-bundler', '~> 2.0'
+  gem 'capistrano-passenger'
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -65,9 +70,13 @@ group :development do
   # gem "spring"
 end
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
+gem 'jquery-rails'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'haml'
+gem 'actionpack-xml_parser'
+gem 'insales_api', github: "insales/insales_api", branch: "fix_active_resource_rails7"
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]

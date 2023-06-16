@@ -35,3 +35,5 @@
 /config/master.key
 /config/database.yml
 /config/credentials.yml.enc 
+
+/config/credentials/production.key
