@@ -1,24 +1,9 @@
 # README
+1) Настраиваем на сервере ngix+passenger, устанавливаем ruby, устанавливаем postgres.Подробно рассказывается как сделать - https://www.youtube.com/watch?v=zvXyHR085a8 .
+2) в директорию /#{name_app}/shared/config на сервере заносим database.yml, master.key
+3) Заходим в  nano ~/.bashrc и добавляем в начало два ключа:
+export RAILS_MASTER_KEY=key
+export SECRET_KEY_BASE=key
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+sudo tail -f ~/www/current/log/production.log - смотрим логи на сервере, что происходит с приложением.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
